@@ -11,8 +11,4 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 COPY --from=builder /go/src/github.com/Sheridan/smartctl_exporter/bin/smartctl_exporter /bin/smartctl_exporter
-COPY docker-entrypoint.sh /
-COPY smartctl_exporter.yaml /
-RUN chmod +x /docker-entrypoint.sh
 EXPOSE 9633
-ENTRYPOINT ["/docker-entrypoint.sh"]
