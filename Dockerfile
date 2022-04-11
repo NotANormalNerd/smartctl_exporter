@@ -11,4 +11,5 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 COPY --from=builder /go/src/github.com/Sheridan/smartctl_exporter/bin/smartctl_exporter /bin/smartctl_exporter
+ENTRYPOINT /bin/smartctl_exporter
 EXPOSE 9633
