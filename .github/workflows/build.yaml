@@ -25,4 +25,4 @@ jobs:
           pull: true
           push: true
           tags: ghcr.io/notanormalnerd/smartctl_exporter:latest
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64,linux/arm64,linux/arm/v7
